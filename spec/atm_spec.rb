@@ -47,10 +47,6 @@ describe Atm do
         expected_output = { status: false, message: 'account disabled', date: Date.today}
         expect(subject.withdraw(5, '1234', account)).to eq expected_output
     end
-    it 'check the length of a number' do
-        number = 1234
-        number_length = Math.log10(number).to_i + 1
-        expect(number_length).to eq 4
-    end 
+  
 
 end 
