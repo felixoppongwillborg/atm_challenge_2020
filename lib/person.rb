@@ -1,5 +1,5 @@
 class Person 
-    attr_accessor :name, :cash, :account
+    attr_accessor :name, :cash, :account, :account
     def initialize (attrs = {})
        set_name(attrs[:name])
        @cash = 0
