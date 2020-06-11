@@ -16,11 +16,11 @@ describe Person do
        expect(subject.account).to be nil 
     end
 
-    # describe 'can create an account' do
-    #    before  { subject.create_account }
-    #    it 'of account class' do
-    #     expect(subject.account).to be_an_instance_of Account
-    #    end
-    # end
+    describe 'can create an account' do
+       before  { subject.create_account }
+      it 'of account class' do
+       expect(subject.account).to be_an_instance_of Account
+      end
+    end
 
 end
