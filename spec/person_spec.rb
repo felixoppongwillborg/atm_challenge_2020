@@ -15,6 +15,7 @@ describe Person do
        expect(subject.account).to be nil 
     end
 
+
     describe 'can create an account' do
        before  { subject.create_account }
       it 'of account class' do
@@ -24,5 +25,12 @@ describe Person do
         expect(subject.account.owner).to be subject
       end
     end
-
+    describe 'can manage funds an account been created' do
+        let(:atm) { Atm.new }
+        before { subject.create_account }
+        it 'can deposit funds' do
+            expect(subject.deposit(100)).to be_truthy
+        end
+    end
 end
+
