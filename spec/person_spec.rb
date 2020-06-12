@@ -11,7 +11,6 @@ describe Person do
     it 'is expected to have a :cash attribute with the value of 0 on initialize ' do
        expect(subject.cash).to eq 0
     end
-    #check if this is correct with coach
     it 'is expected to have a :account attribute' do
        expect(subject.account).to be nil 
     end
@@ -21,9 +20,9 @@ describe Person do
       it 'of account class' do
        expect(subject.account).to be_an_instance_of Account
       end
-      #it 'with himself as an owner' do
-        #expect (subject.account.owner).to be subject
-      #end
+      it 'with himself as an owner' do
+        expect(subject.account.owner).to be subject
+      end
     end
 
 end
