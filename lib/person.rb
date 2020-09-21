@@ -4,10 +4,8 @@ class Person
        set_name(attrs[:name])
        @cash = 0
        @account = nil
-    
-        
-
     end
+    
     def set_owner_of_account(name)
         name
     end
