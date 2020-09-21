@@ -1,17 +1,20 @@
+require './lib/account'
+require './lib/atm'
 class Person 
     attr_accessor :name, :cash, :account
     def initialize (attrs = {})
        set_name(attrs[:name])
        @cash = 0
-       @account = nil
+       @account = nil 
+
     end
-    
+
     def set_owner_of_account(name)
         name
     end
 
     def create_account 
-        self.account = Account.new(owner: self)
+        @account = Account.new(owner: self)
     end
      
     def set_name(obj)
@@ -23,7 +26,14 @@ class Person
     end
 
     def deposit(amount)
-        amount = account   
+        amount = account  
+        #@account  == nil ? missing_account : deposit_funds(amount)
     end
-end
+    #def deposit_funds(amount)
+        #@cash -= amount
+       # @account.balance += amount
+    #end
+
+        
+    end
 
